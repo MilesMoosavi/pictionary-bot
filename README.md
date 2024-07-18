@@ -11,8 +11,8 @@ This project is a work in progress, with separate functionalities for OCR and wo
 4. **Clear Annotations**: Use the `Clear Annotations` button to remove annotations and start fresh.
 5. **Reload Script**: Click the `⟳` button to restart the script.
 
-![image](https://github.com/user-attachments/assets/791ca793-839a-4577-8a04-4d29ca4139f7)
-![image](https://github.com/user-attachments/assets/dd51353e-25e5-437c-83a4-450d2b5e3990)
+<img src="https://github.com/user-attachments/assets/791ca793-839a-4577-8a04-4d29ca4139f7" alt="OCR Testing 1" width="400">
+<img src="https://github.com/user-attachments/assets/dd51353e-25e5-437c-83a4-450d2b5e3990" alt="OCR Testing 2" width="400">
 
 ## Usage for Word Lookup Testing
 1. **Adding/Removing Words**: Click the `+` or `-` buttons to add or remove words from the user-added words list.
@@ -21,7 +21,8 @@ This project is a work in progress, with separate functionalities for OCR and wo
 4. **Always On Top**: Check or uncheck the `Always On Top` button to make this program stay on top of other applications.
 5. **Up/Down Arrows**: When the cursor is not selected on the input field, use the up or down arrow keys to scroll through the potential word matches.
 
-![image](https://github.com/user-attachments/assets/274f7fc3-c593-4d4e-99c1-b2853fafe56c)
+<img src="https://github.com/user-attachments/assets/45920fc2-332e-43d2-8864-cd583d83f0d9" alt="Word Lookup 1" width="400">
+<img src="https://github.com/user-attachments/assets/274f7fc3-c593-4d4e-99c1-b2853fafe56c" alt="Word Lookup" width="400">
 
 ## Installation
 Currently not meant for installation, but the OCR and word lookup functionalities can be explored if the following steps are followed:
