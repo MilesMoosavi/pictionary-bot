@@ -14,7 +14,7 @@ This project is a work in progress, with separate functionalities for OCR and wo
 ![image](https://github.com/user-attachments/assets/791ca793-839a-4577-8a04-4d29ca4139f7)
 ![image](https://github.com/user-attachments/assets/dd51353e-25e5-437c-83a4-450d2b5e3990)
 
-## Usage for Word Loopup Testing
+## Usage for Word Lookup Testing
 1. **Browse for an Image**: Use the `Browse` button to select an image file for OCR processing.
 2. **Select Word Lists**: Select the list of words to read from a preloaded list of text files.  
 3. **Adding/Removing Words**: Click the `+` or `-` buttons to add or remove words to a specific text file containing user-added words.
