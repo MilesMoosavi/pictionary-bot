@@ -4,7 +4,7 @@ from main_menu_logic import MainMenuLogic
 class MainMenuGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title('HintMaster')
+        self.root.title('Pictionary Bot')
 
         self.frame_main = tk.Frame(self.root, padx=10, pady=10)
         self.frame_main.pack(padx=10, pady=10, fill='both', expand=True)
@@ -41,15 +41,7 @@ class MainMenuGUI:
     def quit_app(self):
         self.logic.quit_app()
 
-<<<<<<< Updated upstream
-if __name__ == "__main__":
-    root = tk.Tk()
-    app = MainMenuGUI(root)
-    root.focus_force()
-    root.mainloop()
-=======
 root = tk.Tk()
 app = MainMenuGUI(root)
 root.focus_force()
 root.mainloop()
->>>>>>> Stashed changes

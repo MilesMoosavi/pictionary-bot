@@ -1,20 +1,19 @@
 import tkinter as tk
 from tkinter import filedialog
-import configparser
+import json
 import os
 from capture_area import CaptureArea
 
 class SettingsMenu:
     def __init__(self, master):
         self.master = master
-        self.config = configparser.ConfigParser()
-        self.config_file = os.path.join(os.path.dirname(__file__), '..', 'settings.ini')
+        self.config_file = os.path.join(os.path.dirname(__file__), '..', 'assets', 'config', 'settings.json')
         self.create_window()  # Initialize GUI elements first
         self.ensure_settings()
 
     def ensure_settings(self):
         if not os.path.exists(self.config_file):
-            self.config['Settings'] = {
+            self.config = {
                 'WordbankMethod': 'default',
                 'CustomWordbankPath': '',
                 'CaptureCoordinates': 'None',
@@ -22,33 +21,33 @@ class SettingsMenu:
             }
             self.save_settings()
         else:
-            self.config.read(self.config_file)
-            if 'Settings' not in self.config:
-                self.config['Settings'] = {}
-            if 'WordbankMethod' not in self.config['Settings']:
-                self.config['Settings']['WordbankMethod'] = 'default'
-            if 'CustomWordbankPath' not in self.config['Settings']:
-                self.config['Settings']['CustomWordbankPath'] = ''
-            if 'CaptureCoordinates' not in self.config['Settings']:
-                self.config['Settings']['CaptureCoordinates'] = 'None'
-            if 'LastPosition' not in self.config['Settings']:
-                self.config['Settings']['LastPosition'] = '400x300+100+100'
+            with open(self.config_file, 'r') as file:
+                self.config = json.load(file)
+
+            if 'WordbankMethod' not in self.config:
+                self.config['WordbankMethod'] = 'default'
+            if 'CustomWordbankPath' not in self.config:
+                self.config['CustomWordbankPath'] = ''
+            if 'CaptureCoordinates' not in self.config:
+                self.config['CaptureCoordinates'] = 'None'
+            if 'LastPosition' not in self.config:
+                self.config['LastPosition'] = '400x300+100+100'
             self.save_settings()
 
         self.load_settings()
 
     def load_settings(self):
-        self.wordbank_var.set(self.config['Settings'].get('WordbankMethod', 'default'))
+        self.wordbank_var.set(self.config.get('WordbankMethod', 'default'))
         self.custom_wordbank_entry.delete(0, tk.END)
-        self.custom_wordbank_entry.insert(0, self.config['Settings'].get('CustomWordbankPath', ''))
+        self.custom_wordbank_entry.insert(0, self.config.get('CustomWordbankPath', ''))
         self.update_coordinates_display()
         self.toggle_wordbank_fields()
 
     def save_settings(self):
-        self.config['Settings']['WordbankMethod'] = self.wordbank_var.get()
-        self.config['Settings']['CustomWordbankPath'] = self.custom_wordbank_entry.get()
-        with open(self.config_file, 'w') as configfile:
-            self.config.write(configfile)
+        self.config['WordbankMethod'] = self.wordbank_var.get()
+        self.config['CustomWordbankPath'] = self.custom_wordbank_entry.get()
+        with open(self.config_file, 'w') as file:
+            json.dump(self.config, file, indent=4)
 
     def create_window(self):
         self.settings_window = tk.Toplevel(self.master)
@@ -98,7 +97,7 @@ class SettingsMenu:
         if filepath:
             self.custom_wordbank_entry.delete(0, tk.END)
             self.custom_wordbank_entry.insert(0, filepath)
-            self.config['Settings']['CustomWordbankPath'] = filepath
+            self.config['CustomWordbankPath'] = filepath
             self.save_settings()
 
     def show(self):
@@ -111,9 +110,9 @@ class SettingsMenu:
 
     def update_coordinates_display(self, x1=None, y1=None, x2=None, y2=None):
         if x1 and y1 and x2 and y2:
-            self.config['Settings']['CaptureCoordinates'] = f'({x1}, {y1}), ({x2}, {y2})'
+            self.config['CaptureCoordinates'] = f'({x1}, {y1}), ({x2}, {y2})'
             self.save_settings()
-        capture_coordinates = self.config['Settings'].get('CaptureCoordinates', 'None')
+        capture_coordinates = self.config.get('CaptureCoordinates', 'None')
         self.capture_label.config(text=f"Configured Coordinates: {capture_coordinates}")
 
 if __name__ == "__main__":
