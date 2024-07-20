@@ -4,6 +4,14 @@
 Pictionary Bot is a project aimed at developing an Optical Character Recognition (OCR) and word lookup tool to assist with guessing words from images and obfuscated prompts. 
 This project is a work in progress, with separate functionalities for OCR and word lookup currently in place.
 
+Examples of obfuscated prompts include:
+```
+_ _ _ s _ _ o
+_ a _
+_ _ _   _ _ _ t
+_ _ _ _ _ _
+```
+
 ## Usage for OCR Testing
 1. **Browse for an Image**: Use the `↑` button to select an image file for OCR processing.
 2. **Paste from Clipboard**: Use the `📋` button or `Ctrl + V` to paste an image from the clipboard.
