@@ -16,8 +16,8 @@ This project is a work in progress, with separate functionalities for OCR and wo
 
 ## Usage for Word Lookup Testing
 1. **Adding/Removing Words**: Click the `+` or `-` buttons to add or remove words from the user-added words list.
-2. **Select Word Lists**: Select the wordlist(s) to read from. Currently only capable of writing to the user-added words list.
-3. **Recent Changes**: Views the 10 most recently added/removed words from a custom word list.  
+2. **Select Word Lists**: Select the wordlist(s) to read from. Currently only capable of writing to the user-added-words list.
+3. **Recent Changes**: Views the 10 most recently added/removed words from the user-added-words list.  
 4. **Always On Top**: Check or uncheck the `Always On Top` button to make this program stay on top of other applications.
 5. **Up/Down Arrows**: When the cursor is not selected on the input field, use the up or down arrow keys to scroll through the potential word matches.
 
@@ -25,7 +25,7 @@ This project is a work in progress, with separate functionalities for OCR and wo
 <img src="https://github.com/user-attachments/assets/274f7fc3-c593-4d4e-99c1-b2853fafe56c" alt="Word Lookup" width="400">
 
 ## Installation
-Currently not meant for installation, but the OCR and word lookup functionalities can be explored if the following steps are followed:
+Currently not meant for installation, but the OCR and word lookup functionalities can be explored by doing the following:
 1. Clone the repository:
    ```bash
    git clone https://github.com/MilesMoosavi/pictionary-bot.git
