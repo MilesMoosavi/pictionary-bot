@@ -1,7 +1,7 @@
 # Pictionary Bot
 
 ## Description
-Pictionary Bot is a project aimed at developing an OCR and word lookup tool to assist with guessing words from images and obfuscated prompts. 
+Pictionary Bot is a project aimed at developing an Optical Character Recognition (OCR) and word lookup tool to assist with guessing words from images and obfuscated prompts. 
 This project is a work in progress, with separate functionalities for OCR and word lookup currently in place.
 
 ## Usage for OCR Testing
