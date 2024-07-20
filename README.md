@@ -7,18 +7,18 @@ This project is a work in progress, with separate functionalities for OCR and wo
 ## Examples:
 
 ### Obfuscation taken from [Skribbl.io](https://skribbl.io/):
-Performing an OCR on the first image would result in ```_a_t```.\
+Performing an OCR on the following image would result in ```_a_t```.\
 <img src="https://github.com/user-attachments/assets/0ac5a1c3-9eda-4385-aa89-d848545d5fa0" alt="Example Obfuscation 1 OCR" width="400">\
-Upon pasting the obfuscation into the lookup script, the search would yield 9 potential matches.\
+Upon pasting the OCR text into the lookup field, the search would yield 9 potential matches.\
 <img src="https://github.com/user-attachments/assets/7e8c2f39-7a46-4b9c-ac38-37f1fca0d900" alt="Example Obfuscation 1 Lookup" width="400">
 
 *NOTE TO SELF: INACCURATE OBFUSCATION EXAMPLE. 
 THE OCR WOULD ACTUALLY YIELD* `_a_ta` *AS IT BELIEVES THE 4 TO BE A LOWERCASE A*
 
 ### Obfuscation taken from [DrawIt](https://www.roblox.com/games/3173458677/Draw-It):
-Performing an OCR on the first image would result in ```d___i__```.\
+Performing an OCR on the following image would result in ```d___i__```.\
 <img src="https://github.com/user-attachments/assets/a0b44254-5e92-48b6-99c8-c56d57d483c6" alt="Example Obfuscation 2 OCR" width="400">\
-Upon pasting the obfuscation into the lookup script, the search would yield 1 potential match.\
+Upon pasting the OCR text into the lookup field, the search would yield 1 potential match.\
 <img src="https://github.com/user-attachments/assets/274f7fc3-c593-4d4e-99c1-b2853fafe56c" alt="Example Obfuscation 2 Lookup" width="400">
 
 Currently, the OCR can only handle images that solely contain a string of underscores spliced with sparse characters (limited to the alphabet, periods and hyphens). Any other text or characters that deviate from this format will throw off the OCR. The wordlists that the lookup app references are also not up to date with the pictionary games they represent, nor are there a wide selection of wordlists to choose from. 
