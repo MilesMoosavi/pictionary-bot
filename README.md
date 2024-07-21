@@ -44,6 +44,8 @@ The ultimate goal of Pictionary Bot is to create an app that can automate the gu
 
 <img src="./assets/ocr_testing_before.png" width="75%">
 <img src="./assets/ocr_testing_after.png" width="75%">
+<img src="./assets/ocr_testing_before.png" width="75%">
+<img src="./assets/ocr_testing_after.png" width="75%">
 
 ## Usage for Word Lookup Testing
 1. **Browse for an Image:** Use the `Browse` button.
