@@ -42,8 +42,8 @@ The ultimate goal of Pictionary Bot is to create an app that can automate the gu
 4. **Clear Annotations:** Click `Clear Annotations` to reset.
 5. **Reload Script:** Click `⟳` to restart.
 
-<img src="./assets/ocr_testing_before.png" width="50%">
-<img src="./assets/ocr_testing_after.png" width="50%">
+<img src="./assets/ocr_testing_before.png" width="75%">
+<img src="./assets/ocr_testing_after.png" width="75%">
 
 ## Usage for Word Lookup Testing
 1. **Browse for an Image:** Use the `Browse` button.
@@ -52,7 +52,17 @@ The ultimate goal of Pictionary Bot is to create an app that can automate the gu
 4. **Always On Top:** Toggle this option for the app window.
 5. **Navigate Matches:** Use arrow keys to scroll through matches.
 
-<img src="./assets/word_lookup_testing.png" width="50%">
+<img src="./assets/word_lookup_testing.png" width="75%">
+
+## Usage for Capture Area Testing
+1. **Select Capture Area:** Click the `Select Capture Area` button.
+2. **Configure Coordinates:** The coordinates of the selected area will be displayed.
+3. **Window Selection:** Choose a window from the dropdown menu.
+4. **Window Match Priority:** Select the priority for matching windows (by executable or title).
+5. **Preview Area:** The selected capture area or full window will be displayed in the preview section.
+
+<img src="./assets/capture_area_before.png" width="75%">
+<img src="./assets/capture_area_after.png" width="75%">
 
 ## Installation
 Currently not meant for installation, but you can explore the OCR and word lookup functionalities:

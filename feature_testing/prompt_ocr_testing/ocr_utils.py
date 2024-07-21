@@ -20,11 +20,7 @@ def detect_underscores_and_letters(image_path):
     binary = cv2.dilate(binary, kernel, iterations=1)
     
     # Save the preprocessed image
-<<<<<<< Updated upstream
-    preprocessed_image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'preprocessed.png')
-=======
     preprocessed_image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'preprocessed.png')
->>>>>>> Stashed changes
     cv2.imwrite(preprocessed_image_path, binary)
     
     # Find contours

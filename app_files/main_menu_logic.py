@@ -6,7 +6,7 @@ from settings_menu import SettingsMenu
 from capture_logic import CaptureLogic
 import os
 import sys
-import configparser
+import json
 
 class MainMenuLogic:
     def __init__(self, gui):
@@ -14,8 +14,7 @@ class MainMenuLogic:
         self.root = gui.root
 
         # Load settings
-        self.config = configparser.ConfigParser()
-        self.config_file = os.path.join(os.path.dirname(__file__), '..', 'settings.ini')
+        self.config_file = os.path.join(os.path.dirname(__file__), '..', 'assets', 'config', 'settings.json')
         self.load_settings()
 
         self.capture_logic = CaptureLogic(self.update_display)  # Correctly pass the update_display as a callback
@@ -24,7 +23,7 @@ class MainMenuLogic:
         self.settings_menu = SettingsMenu(self.root)
 
         # Set window position and size based on last saved position
-        self.root.geometry(self.config['Settings'].get('LastPosition', '400x200+100+100'))
+        self.root.geometry(self.config.get('LastPosition', '400x200+100+100'))
         self.root.after(0, self.root.focus_force)
 
         # Display saved coordinates if they exist
@@ -34,9 +33,10 @@ class MainMenuLogic:
         print("Loading settings...")
 
         if os.path.exists(self.config_file):
-            self.config.read(self.config_file)
-        if 'Settings' not in self.config:
-            self.config['Settings'] = {
+            with open(self.config_file, 'r') as file:
+                self.config = json.load(file)
+        else:
+            self.config = {
                 'LastPosition': '400x200+100+100',
                 'CaptureCoordinates': 'None'
             }
@@ -46,9 +46,9 @@ class MainMenuLogic:
     def save_settings(self):
         print("Saving settings...")
 
-        self.config['Settings']['LastPosition'] = self.root.geometry()
-        with open(self.config_file, 'w') as configfile:
-            self.config.write(configfile)
+        self.config['LastPosition'] = self.root.geometry()
+        with open(self.config_file, 'w') as file:
+            json.dump(self.config, file, indent=4)
 
         print("Settings saved.\n")
 
