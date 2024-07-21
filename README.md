@@ -1,9 +1,7 @@
 # Pictionary Bot
 
 ## Description
-Pictionary Bot is a project aimed at automating the process of guessing drawing prompts in any online pictionary game.
-
-The primary goal of Pictionary Bot is to create an app that automates the guessing process in pictionary games. 
+Pictionary Bot is a project aimed at automating the process of guessing drawing prompts in any online pictionary game. 
 Frequent gameplay often leads to memorizing prompts based on their length and structure. 
 This project leverages that pattern recognition into an automated tool.
 
