@@ -1,14 +1,15 @@
 # Pictionary Bot
 
 ## Description
-Pictionary Bot is a project aimed at automating the process of guessing drawing prompts in any online pictionary game. This project is a work in progress, featuring separate functionalities for Optical Character Recognition (OCR) and prompt-lookup.
+Pictionary Bot is a project aimed at automating the process of guessing drawing prompts in any online pictionary game.
+
+The primary goal of Pictionary Bot is to create an app that automates the guessing process in pictionary games. 
+Frequent gameplay often leads to memorizing prompts based on their length and structure. 
+This project leverages that pattern recognition into an automated tool.
 
 ### Current Capabilities
 - **OCR Functionality:** The OCR tool can process images containing strings of underscores interspersed with sparse characters (limited to the alphabet, periods, and hyphens). It constantly monitors a selected area of the screen, similar to OBS window capture but using Python libraries like OpenCV.
 - **Prompt-Lookup Tool:** This tool allows users to input an obfuscated prompt and retrieve possible matches from a database. Note that the prompt databases may not be up-to-date with the pictionary games they represent.
-
-### Project Goals
-The ultimate goal of Pictionary Bot is to create an app that can automate the guessing process in pictionary games. As an avid player, I've noticed that frequent gameplay leads to memorizing prompts based on their length and structure. This project aims to leverage that pattern recognition into an automated tool.
 
 ### Planned Features
 1. **Real-Time Monitoring:**
@@ -54,12 +55,12 @@ The ultimate goal of Pictionary Bot is to create an app that can automate the gu
 
 <img src="./assets/word_lookup_testing.png" width="75%">
 
-## Usage for Capture Area Testing (WIP)
+## Usage for Capture Area Testing
 1. **Select Capture Area:** Click the `Select Capture Area` button.
 2. **Configure Coordinates:** The coordinates of the selected area will be displayed.
 3. **Window Selection:** Choose a window from the dropdown menu.
 4. **Window Match Priority:** Select the priority for matching windows (by executable or title).
-5. **Preview Area (WIP):** The selected capture area or full window will be displayed in the preview section.
+5. **Preview Area:** The selected capture area or full window will be displayed in the preview section.
 
 **Note:** The preview section is still a work in progress. The images below are concepts and may not reflect the current committed code.
 
@@ -67,7 +68,7 @@ The ultimate goal of Pictionary Bot is to create an app that can automate the gu
 <img src="./assets/capture_area_after.png" width="75%">
 
 ## Installation
-Currently not meant for installation, but you can explore the OCR and word lookup functionalities:
+Currently not meant for installation, but you can explore the files in `feature_testing` folder with any Python editor of your choice:
 1. Clone the repository:
    ```bash
    git clone https://github.com/MilesMoosavi/pictionary-bot.git
